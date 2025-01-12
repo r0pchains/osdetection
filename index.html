@@ -1,0 +1,36 @@
+<html>
+<script>
+window.onload = function() {
+  var userAgent = navigator.userAgent;
+
+  // Detect Windows
+  if (userAgent.indexOf("Windows NT") !== -1) {
+    window.location.href = "windows.html";
+  }
+  // Detect macOS
+  else if (userAgent.indexOf("Mac OS X") !== -1) {
+    window.location.href = "mac.html";
+  }
+  // Detect Linux
+  else if (userAgent.indexOf("Linux") !== -1 && userAgent.indexOf("Android") === -1) {
+    window.location.href = "linux.html";
+  }
+  // Detect iPhone (iOS)
+  else if (userAgent.indexOf("iPhone") !== -1) {
+    window.location.href = "iphone.html";
+  }
+  // Detect iPad (iOS)
+  else if (userAgent.indexOf("iPad") !== -1) {
+    window.location.href = "ipad.html";
+  }
+  // Detect Android
+  else if (userAgent.indexOf("Android") !== -1) {
+    window.location.href = "android.html";
+  }
+  // Default: Redirect to a general page if OS is unknown
+  else {
+    window.location.href = "default.html";
+  }
+};
+</script>
+</html>
